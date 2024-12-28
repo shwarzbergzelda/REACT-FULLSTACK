@@ -8,8 +8,8 @@ function App() {
       <Router>
         <Link to="/createpost">Create A Post </Link>
         <Routes>
-          <Route path='/' exact component={Home}/>
-          <Route path='/createpost' exact component={Home}/>
+          <Route path='/' exact element={< Home/>}/>
+          <Route path='/createpost' exact element={Home}/>
         </Routes>
       </Router>
     </div>
