@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
 function CreatePost() {
   const initialValues = {
@@ -16,7 +17,9 @@ function CreatePost() {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    axios.post("http://localhost:3001/posts", data).then((response) => {
+      console.log("Data put in database");
+    });
   };
   return (
     <div className="createPostPage">
