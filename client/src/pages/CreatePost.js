@@ -5,7 +5,7 @@ function CreatePost() {
   return (
     <div className='createPostPage'>
         <Formik>
-            <Form>
+            <Form className='formContainer'>
                 <label>Title: </label>
                 <Field
                     id='inputCreatePost'
