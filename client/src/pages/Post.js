@@ -11,6 +11,7 @@ function Post() {
       setPostObject(response.data);
     });
   });
+
   return (
     <div className="postPage">
       <div className="leftSide">
@@ -20,7 +21,13 @@ function Post() {
           <div className="footer">{postObject.username}</div>
         </div>
       </div>
-      <div className="rightSide">Comment section</div>
+      <div className="rightSide">
+        <div className="addCommentContainer">
+          <input type="text" placeholder="Comment..." />
+          <button> Add Comment </button>
+        </div>
+        <div className="listOfComments"></div>
+      </div>
     </div>
   );
 }
