@@ -20,7 +20,7 @@ function CreatePost() {
     };
     return (
         <div className='createPostPage'>
-            <Formik initialValues={initialValues} onSubmit={onSubmit}>
+            <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
                 <Form className='formContainer'>
                     <label>Title: </label>
                     <Field
